@@ -1,0 +1,117 @@
+/* Base styles for YoutubeCard */
+.youtubeCard {
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  position: relative;
+  perspective: 800px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #444, #222);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.youtubeCard:hover {
+  transform: translateY(-8px);
+}
+
+/* Card container for consistent sizing and spacing */
+.youtubeCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Image (3D star effect using rotateZ) */
+.youtubeCard img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: rotateZ(45deg);
+  transition: transform 0.3s;
+}
+
+.youtubeCard:hover img {
+  transform: scale(1.1) rotateZ(0deg);
+}
+
+/* Title */
+.youtubeCard .MuiTypography-root {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* Delete Button */
+.youtubeCard .MuiButton-root {
+  background-color: #ff3333 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.youtubeCard .MuiButton-root:hover {
+  background-color: #ff0000;
+  transform: translateY(-5px);
+}
+
+/* Text below the card */
+.youtubeCard .text {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .youtubeCardContainer {
+    width: 90%;
+  }
+  .youtubeCard {
+    width: 45%;
+  }
+}
+
+/* Home Youtube section */
+.homeYoutube {
+  background-color: #000;
+  padding: 4vmax 0;
+  border-radius: 20% 20% 0 0;
+  position: relative;
+  min-height: 300px;
+}
+
+.homeYoutube > h3 {
+  text-align: center;
+  color: #fff;
+  padding: 4vmax;
+}
+
+.homeYoutubeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2vmax;
+  width: 90%;
+  margin: auto;
+  background-color: #000;
+  color: #000000;
+}
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+  background-color: #000000 !important;
+}
